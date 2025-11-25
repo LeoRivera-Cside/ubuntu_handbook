@@ -1,0 +1,115 @@
+# Ubuntu Directory Hierarchy
+As specified by the Linux Filesystem Hierarchy Standard. Treat this doc as personal notes and less as authoritative. Although I am trying to creating a reliable source of information, I would recommend you perform your own research --"Trust, but verify".
+
+### `/` - The root directory.
+It is: 
+- Everything on your system.
+- Every other file and directory is found within this one.
+
+It is not:
+- Unimportant.
+
+### `/home` - User's home directory.
+It is: 
+- Personal user's directories and files. 
+- Includes user-specific data and config.
+-  
+
+It is not:
+-
+
+### `/bin` - Essential binary executables.
+It is: 
+- Executable files belonging to basic shell commands. 
+- Accesible by all users in the system.
+
+It is not:
+-
+
+### `/sbin` - System administration binaries.
+It is: 
+-  where binaries that can only be run by root or sudo user.
+
+It is not:
+-
+
+### `/etc` - Configuration files.
+It is: 
+- The system's configuration files. 
+- Used primarily by the administrator and services
+
+It is not:
+-
+
+### `/var` - Variable data logs.
+It is: 
+- where programs store runtime information like logs, user tracking, caches, and other files that system programs create and manage.
+
+It is not:
+- cleaned automatically. 
+
+### `/usr` - User programs and data.
+It is: 
+- Executable files, libraries, source of most system programs. 
+- Often read only.
+
+It is not:
+-
+
+### `/lib` - Shared libraries.
+It is: 
+- Code that can be used by executable binaries. 
+- Holds libraries used by /bin & /sbin directories.
+
+It is not:
+-
+
+### `/tmp` - Temporary files.
+It is: 
+- Contains temperary files; those that are deleted when your system restarts. 
+
+It is not:
+- a directory you want to store anything important. 
+
+### `/opt` - Third-party applications.
+It is: 
+- used for installing/storing files used by third-party applicaitons that are not available from distribution's repo.
+
+It is not:
+-
+
+### `/dev` - Device files
+It is: 
+- Special files related to devices. 
+- Something about virtual files?
+
+### `/root` - Home of the root
+It is:
+- used as the home directory of the root user.
+
+It is not:
+- to be confused with the root directory (/).
+
+### `/media` - Mount point for removable media
+It is:
+- created to access the contents of automatically mounted removable media device.
+
+It is not:
+- 
+
+### `/mnt` - Mount directory
+It is:
+- created to access manually mounted filesystems.
+
+It is not:
+- 
+
+### `/srv` - Service data
+It is:
+- where you can find data for service provided by the system.
+
+It is not:
+- 
+
+### Sources
+- https://linuxhandbook.com/linux-directory-structure/

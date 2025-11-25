@@ -36,12 +36,15 @@ sRemove a directory:
 >rmdir <directory_name>
 
 Move or rename a file or directory:
->mv <old_directory_name> <new_directory_name>
+> mv <old_directory_name> <new_directory_name>
 
 Copy a file or directory:
->cp <directory_name>
+> cp <directory_name>
 
 ## File Editing
 
-Edit a file:
->nano <file_name>
+Open a file using Nano, a straightforward text editor:
+> nano <file_name>
+
+Open a file using Vim, a powerful text editor:
+> vim <file_name>
