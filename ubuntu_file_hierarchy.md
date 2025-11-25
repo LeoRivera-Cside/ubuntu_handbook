@@ -27,9 +27,6 @@ It is:
 It is: 
 -  where binaries that can only be run by root or sudo user.
 
-It is not:
--
-
 ### `/etc` - Configuration files
 
 It is: 

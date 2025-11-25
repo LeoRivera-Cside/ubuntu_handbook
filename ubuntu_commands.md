@@ -5,6 +5,8 @@
 - Current directory can be is represented as (.) when selecting a Directory.
 - To access a file in another directory you must specify the directory as well. 
 - Depending on the command, you may be able to select multiple files by listing them separated by a simple space.
+- Path environment variable is an alternatuve to having to type full directory paths for executing a program/script. 
+-
 
 ## Navigation
 Print the working directory:
@@ -41,6 +43,9 @@ Move or rename a file or directory:
 Copy a file or directory:
 > cp <directory_name>
 
+Display text or strings in the terminal:
+> echo <variable>
+
 ## File Editing
 
 Open a file using Nano, a straightforward text editor:
@@ -48,3 +53,29 @@ Open a file using Nano, a straightforward text editor:
 
 Open a file using Vim, a powerful text editor:
 > vim <file_name>
+
+## Path Directory
+
+Print your current path:
+> echo "$PATH"
+
+Getting a path of a linux command:
+> whereis <command>
+
+Display help about commands:
+> whatis <command>
+    or
+> man <command>
+    or
+> help <command>
+
+Temporarily add a directory to a Path variable:
+> $ export PATH="/bin/myscripts:$PATH"
+
+Permanently add a directory to $PATH:
+    Open the text editor to edit .bashrc:
+> $ nano ~/.bashrc
+    then add to the end of the file:
+> export PATH="/bin/myscripts:$PATH"
+    lastly, save changes, exit, and execute the following:
+> $ source ~/.bashrc
