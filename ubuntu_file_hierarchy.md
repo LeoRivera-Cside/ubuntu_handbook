@@ -6,7 +6,6 @@ As specified by the Linux Filesystem Hierarchy Standard. Treat this doc as perso
 It is: 
 - Everything on your system.
 - Every other file and directory is found within this one.
-
 It is not:
 - Unimportant.
 
@@ -16,7 +15,6 @@ It is:
 - Personal user's directories and files. 
 - Includes user-specific data and config.
 - 
-
 It is not:
 -
 
@@ -25,7 +23,6 @@ It is not:
 It is: 
 - Executable files belonging to basic shell commands. 
 - Accesible by all users in the system.
-
 It is not:
 -
 
@@ -33,7 +30,6 @@ It is not:
 
 It is: 
 -  where binaries that can only be run by root or sudo user.
-
 It is not:
 -
 
@@ -42,7 +38,6 @@ It is not:
 It is: 
 - The system's configuration files. 
 - Used primarily by the administrator and services
-
 It is not:
 -
 
@@ -50,7 +45,6 @@ It is not:
 
 It is: 
 - where programs store runtime information like logs, user tracking, caches, and other files that system programs create and manage.
-
 It is not:
 - cleaned automatically. 
 
@@ -59,7 +53,6 @@ It is not:
 It is: 
 - Executable files, libraries, source of most system programs. 
 - Often read only.
-
 It is not:
 -
 
@@ -68,7 +61,6 @@ It is not:
 It is: 
 - Code that can be used by executable binaries. 
 - Holds libraries used by /bin & /sbin directories.
-
 It is not:
 -
 
@@ -76,7 +68,6 @@ It is not:
 
 It is: 
 - Contains temperary files; those that are deleted when your system restarts. 
-
 It is not:
 - a directory you want to store anything important. 
 
@@ -84,7 +75,6 @@ It is not:
 
 It is: 
 - used for installing/storing files used by third-party applicaitons that are not available from distribution's repo.
-
 It is not:
 -
 
@@ -98,7 +88,6 @@ It is:
 
 It is:
 - used as the home directory of the root user.
-
 It is not:
 - to be confused with the root directory (/).
 
@@ -106,7 +95,6 @@ It is not:
 
 It is:
 - created to access the contents of automatically mounted removable media device.
-
 It is not:
 - 
 
@@ -114,7 +102,6 @@ It is not:
 
 It is:
 - created to access manually mounted filesystems.
-
 It is not:
 - 
 
@@ -122,7 +109,6 @@ It is not:
 
 It is:
 - where you can find data for service provided by the system.
-
 It is not:
 - 
 
