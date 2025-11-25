@@ -14,22 +14,19 @@ It is not:
 It is: 
 - Personal user's directories and files. 
 - Includes user-specific data and config.
-- 
-It is not:
--
 
 ### `/bin` - Essential binary executables
 
 It is: 
 - Executable files belonging to basic shell commands. 
 - Accesible by all users in the system.
-It is not:
--
+
 
 ### `/sbin` - System administration binaries
 
 It is: 
 -  where binaries that can only be run by root or sudo user.
+
 It is not:
 -
 
@@ -38,8 +35,6 @@ It is not:
 It is: 
 - The system's configuration files. 
 - Used primarily by the administrator and services
-It is not:
--
 
 ### `/var` - Variable data logs
 
@@ -53,16 +48,12 @@ It is not:
 It is: 
 - Executable files, libraries, source of most system programs. 
 - Often read only.
-It is not:
--
 
 ### `/lib` - Shared libraries
 
 It is: 
 - Code that can be used by executable binaries. 
 - Holds libraries used by /bin & /sbin directories.
-It is not:
--
 
 ### `/tmp` - Temporary files
 
@@ -75,8 +66,6 @@ It is not:
 
 It is: 
 - used for installing/storing files used by third-party applicaitons that are not available from distribution's repo.
-It is not:
--
 
 ### `/dev` - Device files
 
@@ -95,22 +84,16 @@ It is not:
 
 It is:
 - created to access the contents of automatically mounted removable media device.
-It is not:
-- 
 
 ### `/mnt` - Mount directory
 
 It is:
 - created to access manually mounted filesystems.
-It is not:
-- 
 
 ### `/srv` - Service data
 
 It is:
 - where you can find data for service provided by the system.
-It is not:
-- 
 
 ### Sources
 - https://linuxhandbook.com/linux-directory-structure/
