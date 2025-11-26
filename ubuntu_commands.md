@@ -46,13 +46,16 @@ Copy a file or directory:
 Display text or strings in the terminal:
 > echo <variable>
 
-## File Editing
+## Working with files
 
 Open a file using Nano, a straightforward text editor:
 > nano <file_name>
 
 Open a file using Vim, a powerful text editor:
 > vim <file_name>
+
+Join several input files by sending their content on standard output:
+> cat <file_name> ...
 
 ## Path Directory
 
@@ -79,3 +82,24 @@ Permanently add a directory to $PATH:
 > export PATH="/bin/myscripts:$PATH"
     lastly, save changes, exit, and execute the following:
 > $ source ~/.bashrc
+
+### Standard I/O & Redirection
+
+Redirect the output of a command to a file. If the file does not exists, the shell will create it. 
+> <command> > <file-name>
+
+To append a redirect to a file, instead of overwriting it:
+> <command> >> <file_name>
+
+Pipe redirection: send the stdout of a command into the stdin of another command. Can be chained into multiple commands.
+> <command_a> | <command_b> 
+
+Redirect the content of the file to stdin of theh command
+> <command> < <file_name>
+
+Redirect error output to a file:
+> <command> 2> <file_name>
+
+## Sources
+
+https://linuxhandbook.com/redirection-linux/
