@@ -1,5 +1,13 @@
 # Ubuntu Command Handbook
 
+## Definitions
+ - User, when relating to linux file permissions, is the owner of the file. Usually the creator of said file, but ownership can change. 
+ - Groups, when relating to lnux file permissions, consists of several users in a system. Several groups can be created and their users managed. 
+ - Other, when relating to linux file permissions, can be considered as another group for anyone with access to the system.
+ - Read, when relating to linux file permissions, means a user view or copy file or directory contents. 
+ - Write, when relating to linux file permissions, means a user can modify files or add/delete files into a directory (this needs execute permission as well).
+ -Execute, when relating to linux file permissions, means a user can run a file or enter a directory.
+
 ## Key Considerations
 - File and Directory names are case sensitive
 - Current directory can be is represented as (.) when selecting a Directory.
@@ -23,6 +31,13 @@ Change directory to current containing directory:
 
 Use the less application to scroll through pages of a file:
 >less <file_name>
+
+## Text Processing
+
+Cut out sections of each line from a file or output and display it on stdout. 
+> cut <file_name> [option] [specifics]
+
+
 ## File Management
 
 Create a new empty file
@@ -38,10 +53,10 @@ sRemove a directory:
 >rmdir <directory_name>
 
 Move or rename a file or directory:
-> mv <old_directory_name> <new_directory_name>
+> mv <old_source_name> <new_destination_name>
 
 Copy a file or directory:
-> cp <directory_name>
+> cp <source_name> <destination_name>
 
 Display text or strings in the terminal:
 > echo <variable>
@@ -83,7 +98,7 @@ Permanently add a directory to $PATH:
     lastly, save changes, exit, and execute the following:
 > $ source ~/.bashrc
 
-### Standard I/O & Redirection
+## Standard I/O & Redirection
 
 Redirect the output of a command to a file. If the file does not exists, the shell will create it. 
 > <command> > <file-name>
@@ -100,6 +115,46 @@ Redirect the content of the file to stdin of theh command
 Redirect error output to a file:
 > <command> 2> <file_name>
 
+## Linux File Permissions
+
+Check file permissions. You will see a 9 character pattern. First three relate to the user owner, the following three to the group owner, and the last three for the other group (R = read, W = write, X = exeecute, - = no permissions)
+> stat [option] <files>
+
+Change file permissions
+> chmod [abolute mode permissions] <file_name>
+> chmod [symbolic mode permissions] <file_name>
+
+Change a file's user-owner in Linux: 
+> chown <new_user_name> <file_name>
+
+Change file user-group in linux:
+> chown :<new_user_group> <file_name>
+> chgrp <new_user_group> <file_name>
+
+
+## Compression
+
+create a tar archive; a format used to organize and manage multiple files into a single archive:
+> tar cvf <archive_name.tar> <directory_to_archive/>
+
+to extract a tar archive:
+> tar xvf <archive_name.tar>
+
+To create a gzip comptressed tar file; a size reduction format optimized for speed:
+> tar cvzf <archive_name.tar.gz> <directory_to_archive/>
+
+To create a bzip2 compressed tar achive, a size reduction format optimized for size:
+> tar cvjf <archive_name.tar.bz2> <directory_to_archive/>
+
+## File links
+
+Create a hard link (a mirror copy of a file in a Linux/Unix system, essentially an additional name for the same file data):
+> ln <source_name> <link_name>
+
+Create a soft link (a shortcut pointing to a file in a Linux/Unix system):
+> ln -s <source_name> <link_name>
+
 ## Sources
 
 https://linuxhandbook.com/redirection-linux/
+https://linuxhandbook.com/linux-file-permissions/
