@@ -154,7 +154,188 @@ Create a hard link (a mirror copy of a file in a Linux/Unix system, essentially 
 Create a soft link (a shortcut pointing to a file in a Linux/Unix system):
 > ln -s <source_name> <link_name>
 
+
+#Processes
+
+Find the ID of a running process (aka PID):
+> pidof <process_name>
+
+Resumes stopped job keeping it in the foreground
+> fg <%process_ID>
+
+Resume stopped job while keeping it in the background. 
+> bg <%process_ID>
+
+To close the terminal without stopping commands:
+> disown <%process_ID>
+
+stop command from running:
+> kill <%process_ID>
+
+Show all ongoing processes:
+> top
+
+Show information about currently running processes:
+> ps <process_name>
+> ps <process_ID>
+
+Show information about currently running processes with Priority (PR) & Nice (NI) values:
+> ps -elf
+
+Start a new process while specifying a priority. -20 (highest) to 19 (lowest).
+> nice -n [nice_value] <PID>
+
+Modify the nice value without restarting a process. -20 (highest) to 19 (lowest).
+> renice -n [nice_value] <PID>
+
+Display free disk space across all file systems: 
+> df
+
+Display free and used memory on the system:
+> free
+
+Terminate a process gracefully: 
+> kill -15 <process_ID>
+
+Kill a process forcefully:
+> kill -9 <process_ID>
+
+Fork a process to create an independent copy of another process (along w/ memory & resources) using a different PID and isolated from the original. 
+> '#include <unistd.h>
+pid_t fork(void)'
+
+## User Management
+
+Create a new user:
+> sudo useradd <user_name>
+
+Create a new user with a home directory:
+> sudo useradd -m <user_name>
+
+Set a user's password:
+>sudo passwd <user_name>
+
+Modify a user's properties:
+> sudo usermod [options] <user_name>
+
+Add a user to a group:
+> sudo usermod -aG <group> <user>
+
+Remove a user from a group:
+> sudo gpasswd --delete <user> <group>
+
+Lock a user's account:
+> sudo passwd -1 <user>
+
+Unlock a user's account:
+> sudo passwd -u <user>
+
+Switch to another user's account (you'll be prompted for a password if one exists): 
+> su - <user>
+
+Delete a user: 
+> sudo userdel -r <user>
+
+## Group management
+ 
+Create a group:
+> sudo groupadd [options] <group> 
+
+Change group ID:
+> sudo groupmod -g <group_ID> <group>
+
+Change a group's name: 
+> sudo groupmod -n <new_name> <old_name>
+
+Delete a group:
+> sudo groupdel <group>
+
+## Service Management
+
+start a service:
+> sudo systemctl start <service_name>
+
+stop a service
+> sudo systemctl stop <service_name>
+
+restart a service:
+> sudo systemctl restart <service_name>
+
+check a service's status:
+> systemctl status <service_name>
+
+## Package Management
+
+Upgrade a system:
+> apt-get update
+
+Refresh available package versions:
+> sudo apt update
+
+Search for a package to install:
+> apt search <package_name>
+
+Install a package
+> sudo apt install <package_name>
+
+List installed packages:
+> sudo apt list --installed
+
+Uninstall a package:
+> sudo apt purge <package_name>
+
+Remove any unneeded dependencies:
+> sudo apt autoremove
+
+list upgradable packages:
+> apt list --upgradable
+
+Update all installed packages:
+> sudo apt upgrade
+
+Update a specific package:
+> sudo apt install --only-upgrade <package_name>
+
+Hold a package from being upgraded:
+> sudo apt-mark hold <package_name>
+
+Allow a package to be upgraded again: 
+> sudo apt-mark unhold <package_name>
+
+## Networking
+
+List available network interfaces:
+> ifconfig
+
+Manage network interfaces, routing, and tunnels
+> ip 
+
+Send a series of data packets to a host and await a response. Used to troubleshoot connections:
+> ping <host>
+
+List open ports:
+> netstat [options]
+
+list open ports:
+> ss [options]
+
+Query a DNS server:
+> nslookup <host>
+
+Configure firewalls with iptables: (unfinished)
+> sudo iptables [options]......
+
+Monitor Network traffic
+> sudo tcpdump [option] <network_interface>
+
+Send a data packet to a destination and list all intermediate routers/hops along the way. 
+> traceroute <host>
+
+Map a computer network: 
+> nmap [options] <ip_address>
+
 ## Sources
 
 https://linuxhandbook.com/redirection-linux/
 https://linuxhandbook.com/linux-file-permissions/
+https://centlinux.com/linux-networking/
