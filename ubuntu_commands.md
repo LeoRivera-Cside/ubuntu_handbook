@@ -313,7 +313,7 @@ Manage network interfaces, routing, and tunnels
 Send a series of data packets to a host and await a response. Used to troubleshoot connections:
 > ping <host>
 
-List open ports:
+List open ports and measure their performance:
 > netstat [options]
 
 list open ports:
@@ -325,7 +325,7 @@ Query a DNS server:
 Configure firewalls with iptables: (unfinished)
 > sudo iptables [options]......
 
-Monitor Network traffic
+Monitor TCP/IP traffic, capturing and analyzing network traffic to identify networking issues:
 > sudo tcpdump [option] <network_interface>
 
 Send a data packet to a destination and list all intermediate routers/hops along the way. 
@@ -333,6 +333,17 @@ Send a data packet to a destination and list all intermediate routers/hops along
 
 Map a computer network: 
 > nmap [options] <ip_address>
+
+Restart the networking service:
+> sudo systemctl restart networking
+
+## Containerization
+
+Limit the resources available to a client-user:
+> ulimit [option]
+
+Allocate resources among hierarchically ordered groups of processes:
+> cgroup [option]
 
 ## Sources
 
