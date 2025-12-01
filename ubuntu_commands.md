@@ -342,8 +342,11 @@ Restart the networking service:
 Limit the resources available to a client-user:
 > ulimit [option]
 
+Create a hierarchically ordered group of processes: 
+> cgcreate [option]
+
 Allocate resources among hierarchically ordered groups of processes:
-> cgroup [option]
+> cgroups [option]
 
 ## Sources
 
